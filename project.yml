@@ -1,0 +1,86 @@
+---
+settings:
+  name: Global File Cache
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: fr-fr,us-en,ja-jp,zh-cn,zh-tw,ko-kr,de-de
+sidebar:
+  entries:
+  - title: Documents du cache de fichiers global
+    url: "/index.html"
+  - title: Notes de mise à jour
+    entries:
+    - title: Quoi de neuf
+      url: "/whats-new.html"
+    - title: Problèmes résolus
+      url: "/fixed-issues.html"
+  - title: Commencez
+    entries:
+    - title: En savoir plus sur Global File cache
+      url: "/concept-gfc.html"
+    - title: Conditions préalables requises pour Global File cache
+      url: "/concept-before-you-begin-to-deploy-gfc.html"
+    - title: Déploiement et licence de Global File cache
+      url: "/task-gfc-getting-started.html"
+    - title: Conditions préalables requises pour Global File cache Edge
+      url: "/download-gfc-resources.html"
+    - title: Déploiement de Global File cache Edge
+      url: "/task-deploy-gfc-edge-instances.html"
+  - title: Utiliser Global File cache
+    entries:
+    - title: Formation des utilisateurs finaux
+      url: "/concept-gfc-enduser-training.html"
+    - title: Informations supplémentaires
+      url: "/reference-gfc-additional-information.html"
+  - title: Connaissances et support
+    entries:
+    - title: S'inscrire pour obtenir de l'aide
+      url: "/task-support-registration.html"
+    - title: Obtenez de l'aide
+      url: "/task-get-help.html"
+  - title: Mentions légales
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: Commencez
+    links:
+    - title: En savoir plus sur Global File cache
+      url: concept-gfc.html
+    - title: Nouveautés
+      url: whats-new.html
+    - title: Limites
+      url: concept-gfc.html#limitations
+  - title: Déployez les composants
+    links:
+    - title: Déployez Cloud Volumes ONTAP en tant que plateforme de stockage
+      url: task-gfc-getting-started.html#deploy-cloud-volumes-ontap-as-your-storage-platform
+    - title: Déploiement du serveur Global File cache Management Server et du noyau
+        Global File cache
+      url: task-gfc-getting-started.html#enable-global-file-cache-in-your-working-environment
+    - title: Déploiement des instances Global File cache Edge
+      url: task-deploy-gfc-edge-instances.html
+  - title: Former les utilisateurs
+    links:
+    - title: Formation des utilisateurs finaux
+      url: concept-gfc-enduser-training.html
+  - title: Communauté sur les blogs
+    links:
+    - title: Communauté NetApp
+      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+    - title: Blog BlueXP
+      url: https://cloud.netapp.com/blog
+    - title: Webinaires sur le cloud
+      url: https://cloud.netapp.com/events
+  - title: Autres ressources
+    links:
+    - title: Cas d'utilisation de BlueXP
+      url: https://cloud.netapp.com/global-file-cache
+product-family:
+  name: BlueXP
+  repo: cloud-manager-family
+  sidebar_label: Toute la documentation BlueXP

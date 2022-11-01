@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: fixed-issues.html 
+keywords: fixed issues, release notes, fixes, gfc, global file cache 
+summary: Découvrez quels problèmes ont été résolus dans Global File cache. 
+---
+= Problèmes résolus dans Global File cache
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Découvrez quels problèmes ont été résolus dans Global File cache.
+
+
+
+== 24 octobre 2022 (version 2.1)
+
+* Une validation supplémentaire du numéro d'abonnement réseau GFC est effectuée lors de la configuration des licences.
+* La prise en charge de Fibre Channel a été ajoutée pour étendre la licence pour une durée spécifique pour les licences basées sur Zuora. Contactez le support Fibre Channel.
+* Ajout d'un délai de 15 secondes avant d'écrire un minidump après une collision. Ajout d'un minuteur pour surveiller le minividage et quitter le processus de force si le vidage ne s'effectue pas en 60 secondes. Ces améliorations mineures contribueront à une meilleure analyse.
+* Suppression de la propagation des informations de transfert de fichiers individuels vers Cloud Insights, mais ajout de la propagation des informations de résumé de transfert de fichier dans Cloud Insights. La charge sur l'infrastructure convergée est ainsi réduite.
+* Ingestion fixe des données et des métadonnées dans Cloud Insights. Cela permet d'utiliser une infrastructure convergée de visualisation des données.
+* L'interface utilisateur de Configuration Optimus n'est pas suspendue en cliquant sur le bouton « enregistrement de l'instance à l'EC ».
+* Résolution d'un problème où le moniteur Tservice reste manuel pendant la configuration initiale.
+* Correction des bogues mineurs dans le service client de l'agent d'infrastructure convergée de réseau réseau réseau de réseau de stockage.
+
+
+
+
+== 25 juillet 2022 (version 2.0)
+
+* Optimus est amélioré en ajoutant des limites aux paramètres de date et d'heure pour la configuration d'ajout de tâches pré-démographiques.
+* Optimus PSM affiche maintenant les détails exacts de l'UC dans les détails de pré-demande du système.
+* Correction d'une exception dans l'interface utilisateur pendant la configuration de Edge Sync entre la saisie des détails du coordinateur et le clic sur le bouton Actualiser.
+* Amélioration de l'interface utilisateur Optimus pour activer/désactiver la fonction Edge Sync sur la périphérie.
+* Résolution du problème de plage de dates dans License Server Manager pour l'agrégateur de licences Zuora.
+* Correction du PSM Optimus pour afficher les renseignements sur le nombre de locations.
+* Logique du serveur de gestion des licences fixes sur le programme de mise à jour de la configuration pendant une mise à niveau.
+
+
+
+
+== 23 juin 2022 (version 1.3.1)
+
+* Lors de la mise à niveau, la version correcte de Microsoft redistribuable n'est pas installée correctement et, par conséquent, Tum ne démarre pas. Le programme d'installation de réseau réseau de stockage a été corrigé pour installer la version redistribuable correcte.
+* Le service de gestion des licences réseau (LMS) de réseau de gestion des licences de réseau de réseau de réseau de réseau de gestion des licences de réseau de réseau de réseau de réseau de réseau
+* L'interface utilisateur de configuration se lie désormais à la dll System.net.http correcte lors du processus de mise à niveau.
+
+
+
+
+== 19 mai 2022 (version 1.3.0)
+
+* La page de l'interface utilisateur de configuration de la fonctionnalité de synchronisation Edge est mise à jour.
+* Correction d'un problème lors de l'ajout de travaux de pré-remplissage pour plusieurs arêtes en même temps via des applets de commande PowerShell.
+* Résolution d'un problème d'affichage dans l'interface utilisateur Web de LMS qui affiche l'abonnement NetApp.
+* Le script PowerShell de configuration LMS utilise désormais TLS 1.2.
+* Correction d'un problème dans TappN (service de préremplissage) et lui permet de continuer à exécuter le travail, malgré des déconnexions transitoires ou des redémarrages de Tum.
+* Le service de pré-remplissage TappN est mis à jour pour ignorer les fichiers de récupération si l'espace de cache libre est inférieur à la valeur seuil inférieure.
+* Résolution d'un problème dans le service du serveur de gestion des licences (LMS) lors de l'écriture d'un journal de suivi.
+* L'infrastructure de consignation pour Tum est mise à jour pour être plus évolutive avec des performances élevées.
+
+
+
+
+== 17 décembre 2021 (version 1.2.0)
+
+* L'interface utilisateur de configuration (Optimus) est améliorée pour valider les entrées de champ de date lors de l'ajout de travaux de préremplissage.
+* Le pré-peuplement est amélioré pour surveiller l'utilisation du cache et ignore le remplissage si l'utilisation du cache atteint près des paramètres de nettoyage du cache.
+* Suppression de la dépendance matérielle du service LMS (License Management Server) exécutée localement avec la configuration de stratégie.
+* Le pilote du noyau Fibre Channel est amélioré pour éviter une panne dans le service SMB Server sous Windows Server 2016/2019.
+* Correction d'une exception dans le service LMS.
+* Les types de démarrage de service pour le service du serveur de gestion des licences (LMS), le service client du Gestionnaire de licences (LMC) et le service de préremplissage (TappN) sont remplacés par « retard automatique » à « automatique ».
+

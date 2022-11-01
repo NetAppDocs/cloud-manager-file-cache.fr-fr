@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, gfc, global file cache' 
+summary: Découvrez les nouveautés de Global File cache. 
+---
+= Nouveautés de Global File cache
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Découvrez les nouveautés de Global File cache.
+
+
+
+== 24 octobre 2022 (version 2.1)
+
+Cette version fournit les nouvelles fonctionnalités répertoriées ci-dessous. Il corrige également les problèmes décrits dans le https://docs.netapp.com/us-en/cloud-manager-file-cache/fixed-issues.html["Problèmes résolus"]. Les mises à jour de logiciels sont disponibles à l'adresse https://docs.netapp.com/us-en/cloud-manager-file-cache/download-gfc-resources.html#download-required-resources["cette page"].
+
+
+
+=== Global File cache est désormais disponible avec tout nombre de licences
+
+La précédente exigence minimale de 10 licences, ou 30 To de stockage, a été supprimée. Une licence Global File cache sera émise pour chaque 3 To de stockage.
+
+
+
+=== Le support a été ajouté pour l'utilisation d'un serveur de gestion des licences hors ligne
+
+Un site hors ligne ou foncé, License Management Server (LMS) est plus utile lorsque le LMS ne dispose pas d'une connexion Internet pour la validation de licence avec des sources de licence. Une connexion Internet et une connexion à la source de licence sont requises au cours de la configuration initiale. Une fois configurée, l'instance LMS peut devenir sombre. Toutes les arêtes/cœurs doivent disposer d'une connexion avec LMS pour la validation continue des licences.
+
+
+
+=== Les instances Edge peuvent prendre en charge des utilisateurs simultanés supplémentaires
+
+Une seule instance Global File cache Edge peut accueillir jusqu'à 500 utilisateurs par instance physique Edge dédiée, et jusqu'à 300 utilisateurs pour les déploiements virtuels dédiés. Le nombre maximal d'utilisateurs était de 400 et 200, respectivement.
+
+
+
+=== Optimus PSM amélioré pour configurer le système Cloud Licensing
+
+
+
+=== Amélioration de la fonctionnalité de synchronisation Edge dans l'interface utilisateur Optimus (Configuration Edge) pour afficher tous les clients connectés
+
+
+
+== 25 juillet 2022 (version 2.0)
+
+Cette version fournit les nouvelles fonctionnalités répertoriées ci-dessous. Il corrige également les problèmes décrits dans le https://docs.netapp.com/us-en/cloud-manager-file-cache/fixed-issues.html["Problèmes résolus"].
+
+
+
+=== Nouveau modèle de licence basé sur la capacité pour le cache de fichiers global via Azure Marketplace
+
+La nouvelle licence Edge cache inclut les mêmes fonctionnalités que la licence Cloud volumes ONTAP Professional, mais elle prend également en charge Global File cache. Cette option est disponible lors du déploiement d'un nouveau système Cloud Volumes ONTAP dans Azure. Vous êtes autorisé à déployer un système Global File cache Edge pour chaque 3 To de capacité provisionnée sur le système Cloud Volumes ONTAP. 30 To minimum doivent être provisionnés. Le service Gestionnaire de licences Fibre Channel a été amélioré pour offrir une licence basée sur la capacité.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html#capacity-based-licensing["En savoir plus sur le package de licences Edge cache."]
+
+
+
+=== Le cache global de fichiers est désormais intégré à Cloud Insights
+
+Vous bénéficiez d'une visibilité complète sur votre infrastructure et vos applications grâce à NetApp Cloud Insights. Global File cache est désormais intégré à ci pour offrir une visibilité complète de tous les bords et cœurs, ainsi que des processus de surveillance exécutés sur les instances. Plusieurs metrics Global File cache sont envoyées à l'IC pour fournir une vue d'ensemble complète sur le tableau de bord de l'IC. Reportez-vous au chapitre 11 du https://repo.cloudsync.netapp.com/gfc/Global%20File%20Cache%202.1.0%20User%20Guide.pdf["Guide de l'utilisateur NetApp Global File cache"^]
+
+https://cloud.netapp.com/cloud-insights["En savoir plus sur Cloud Insights."]
+
+
+
+=== Le serveur de gestion des licences a été amélioré pour fonctionner dans des environnements très restrictifs
+
+Lors de la configuration de la licence, le système LMS (License Management Server) doit avoir accès à Internet afin de collecter les informations de licence auprès de NetApp/Zuora. Une fois la configuration réussie, le système de gestion de l'apprentissage peut continuer à fonctionner en mode hors ligne et fournir des capacités de licence malgré des environnements restrictifs.
+
+
+
+=== L'interface de synchronisation Edge dans Optimus a été améliorée pour afficher la liste des clients connectés sur un coordinateur Edge
+
+
+
+== 23 juin 2022 (version 1.3.1)
+
+Le logiciel Global File cache Edge pour la version 1.3.1 est disponible à l'adresse https://docs.netapp.com/us-en/cloud-manager-file-cache/download-gfc-resources.html#download-required-resources["cette page"]. Cette version corrige les problèmes décrits dans le https://docs.netapp.com/us-en/cloud-manager-file-cache/fixed-issues.html["Problèmes résolus"].
+
+
+
+== 19 mai 2022 (version 1.3.0)
+
+Le logiciel Global File cache Edge pour la version 1.3.0 est disponible à l'adresse https://docs.netapp.com/us-en/cloud-manager-file-cache/download-gfc-resources.html#download-required-resources["cette page"].
+
+
+
+=== Nouvelle fonctionnalité de synchronisation des bords de métadonnées
+
+Cette fonctionnalité de « synchronisation des bords de métadonnées » utilise la fonction de synchronisation Edge comme infrastructure principale. Seules les informations de métadonnées sont mises à jour sur toutes les arêtes souscrites et les fichiers/dossiers sont créés sur les machines Edge.
+
+
+
+=== Améliorations du service de Gestionnaire de licences
+
+Le service LMS (Global File cache License Management Server) a été amélioré pour détecter automatiquement les paramètres proxy. Cela permet une configuration transparente.
+
+
+
+== 17 décembre 2021 (version 1.2.0)
+
+
+
+=== Le module OpenSSL a été mis à niveau vers la version 1.1.1l
+
+Il s'agit de la version la plus récente et elle est plus sécurisée. Ce module est utilisé pour une communication sécurisée entre Fibre Channel Edge et Fibre Channel Core.
+
+
+
+=== L'infrastructure de consignation a été améliorée
