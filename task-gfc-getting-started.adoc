@@ -30,18 +30,23 @@ Regarder link:https://www.youtube.com/watch?v=TGIQVssr43A["vidéo"^] pour voir l
 
 Pour démarrer rapidement, suivez ces étapes ou faites défiler jusqu'aux sections restantes pour obtenir des informations détaillées :
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Une seule"] Déployez Cloud Volumes ONTAP
 [role="quick-margin-para"]
 Déployez Cloud Volumes ONTAP dans Azure ou AWS et configurez les partages de fichiers SMB. Pour plus d'informations, voir https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["Lancement d'Cloud Volumes ONTAP dans Azure"^] ou https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["Lancement d'Cloud Volumes ONTAP dans AWS"^].
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Déployez le serveur Global File cache Management Server
 [role="quick-margin-para"]
 Déployer une instance du serveur de gestion globale du cache des fichiers dans le même environnement de travail que l'instance de Cloud Volumes ONTAP.
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"] Déployez Global File cache Core
 [role="quick-margin-para"]
 Déployez une ou plusieurs instances de Global File cache Core dans le même environnement de travail que l'instance de Cloud Volumes ONTAP et joignez-la à votre domaine Active Directory.
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatre"] Cache global des fichiers de licence
 [role="quick-margin-para"]
 Configurez le service LMS (Global File cache License Management Server) sur une instance de base Global File cache. Vous aurez besoin de vos identifiants NSS ou d'un ID client et d'un numéro d'abonnement fournis par NetApp pour activer votre abonnement.
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinq"] Déployez les instances Global File cache Edge
 [role="quick-margin-para"]
 Voir link:task-deploy-gfc-edge-instances.html["Déploiement des instances Global File cache Edge"^] Pour déployer les instances Global File cache Edge dans chaque emplacement distant. Cette étape n'est pas effectuée avec BlueXP.
 
@@ -151,6 +156,7 @@ Un message indiquant que votre abonnement à la licence réseau sans réseau a �
 . Vous pouvez également cliquer sur l'onglet *informations de licence* pour afficher toutes les informations de votre licence de réseau de stockage.
 
 
+.Et la suite ?
 Si vous avez déterminé que vous devez déployer plusieurs cœurs de cache de fichiers globaux pour prendre en charge votre configuration, cliquez sur *Ajouter une instance principale* dans le tableau de bord et suivez l'assistant de déploiement.
 
 Une fois votre déploiement Core terminé, vous devez link:download-gfc-resources.html["Déployez les instances Global File cache Edge"^] dans chacun de vos bureaux distants.
