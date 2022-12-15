@@ -22,7 +22,7 @@ Avant de commencer à déployer Global File cache dans le cloud et dans vos bure
 
 Selon vos besoins, vous devrez peut-être déployer une ou plusieurs instances de base Global File cache pour créer Global File cache Fabric. L'instance principale est conçue pour servir de point de défaillance du trafic entre vos instances globales de cache de fichiers Edge distribuées et les ressources du serveur de fichiers du centre de données, par exemple les partages de fichiers, les dossiers et les fichiers.
 
-Lors de la conception de votre déploiement Global File cache, vous devez déterminer ce qui convient à votre environnement en termes d'échelle, de disponibilité des ressources et de redondance. Global File cache Core peut être déployé de plusieurs manières :
+Lorsque vous concevez votre déploiement Global File cache, vous devez déterminer ce qui convient à votre environnement en termes d'évolutivité, de disponibilité des ressources et de redondance. Global File cache Core peut être déployé de plusieurs manières :
 
 * Instance autonome Fibre Channel Core
 * Conception distribuée Fibre Channel Core Load (mise en veille à froid)
@@ -81,7 +81,7 @@ Les prérequis Global File cache Edge sont décrits link:download-gfc-resources.
 
 === Plateforme de stockage (volumes)
 
-La plateforme de stockage interne – dans ce cas, votre instance Cloud Volumes ONTAP déployée – doit présenter les partages de fichiers SMB. Tout partage qui sera exposé via Global File cache doit permettre au groupe Everyone de contrôler entièrement au niveau du partage, tout en limitant les autorisations par le biais des autorisations NTFS.
+La plateforme de stockage interne, dans ce cas, votre instance Cloud Volumes ONTAP déployée, doit présenter les partages de fichiers SMB. Tout partage qui sera exposé via Global File cache doit permettre au groupe Everyone de contrôler entièrement au niveau du partage, tout en limitant les autorisations par le biais des autorisations NTFS.
 
 Si vous n'avez pas configuré au moins un partage de fichiers SMB sur l'instance Cloud Volumes ONTAP, vous devez disposer des informations suivantes pour pouvoir configurer ces informations lors de l'installation :
 
@@ -97,18 +97,11 @@ Nous vous recommandons d'augmenter ce volume suffisamment pour prendre en charge
 
 Ce serveur Global File cache Management requiert un accès externe via HTTPS (port TCP 443) pour se connecter au service d'abonnement du fournisseur cloud et pour accéder aux URL suivantes :
 
-* Si vous utilisez une licence basée sur l'abonnement Fibre Channel :
-+
-** \https://rest.zuora.com/v1/subscriptions/
-** \https://rest.zuora.com/oauth/token
-
-
-* Si vous utilisez une licence NetApp basée sur d'anciens systèmes :
-+
-** \https://talonazuremicroservices.azurewebsites.net
-** \https://talonlicensing.table.core.windows.net
-
-
+* \https://gfcproxyforcm-prod.azurewebsites.net/
+* \https://rest.zuora.com/v1/subscriptions/
+* \https://rest.zuora.com/oauth/token
+* \https://talonazuremicroservices.azurewebsites.net
+* \https://talonlicensing.table.core.windows.net
 
 
 Ce port doit être exclu de tout périphérique d'optimisation WAN ou de toute stratégie de restriction de pare-feu pour que le logiciel Global File cache fonctionne correctement.
@@ -189,6 +182,6 @@ Le LMS Global File cache requiert un accès externe via HTTPS (port TCP 443) aux
 === Mise en réseau
 
 * Pare-feu : les ports TCP doivent être autorisés entre les instances Global File cache Edge et Core.
-* Ports TCP Global File cache : 443 (HTTPS), 6618–6630.
+* Ports TCP Global File cache : 443 (HTTPS), 6618-6630.
 * Les périphériques d'optimisation réseau (tels que Riverbed Steelhead) doivent être configurés pour passer par les ports spécifiques à Global File cache (TCP 6618-6630).
 

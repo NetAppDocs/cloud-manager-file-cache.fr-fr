@@ -103,17 +103,3 @@ Cette fonctionnalité de « synchronisation des bords de métadonnées » utilis
 === Améliorations du service de Gestionnaire de licences
 
 Le service LMS (Global File cache License Management Server) a été amélioré pour détecter automatiquement les paramètres proxy. Cela permet une configuration transparente.
-
-
-
-== 17 décembre 2021 (version 1.2.0)
-
-
-
-=== Le module OpenSSL a été mis à niveau vers la version 1.1.1l
-
-Il s'agit de la version la plus récente et elle est plus sécurisée. Ce module est utilisé pour une communication sécurisée entre Fibre Channel Edge et Fibre Channel Core.
-
-
-
-=== L'infrastructure de consignation a été améliorée
