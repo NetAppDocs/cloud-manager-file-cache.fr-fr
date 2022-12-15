@@ -708,7 +708,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-14 18:26:54 +0000">12/14/2022</time>
+    <time datetime="2022-12-15 15:19:24 +0000">12/15/2022</time>
     
   
 
@@ -732,7 +732,7 @@
 <p>Selon vos besoins, vous devrez peut-être déployer une ou plusieurs instances de base Global File cache pour créer Global File cache Fabric. L&#8217;instance principale est conçue pour servir de point de défaillance du trafic entre vos instances globales de cache de fichiers Edge distribuées et les ressources du serveur de fichiers du centre de données, par exemple les partages de fichiers, les dossiers et les fichiers.</p>
 </div>
 <div class="paragraph">
-<p>Lors de la conception de votre déploiement Global File cache, vous devez déterminer ce qui convient à votre environnement en termes d&#8217;échelle, de disponibilité des ressources et de redondance. Global File cache Core peut être déployé de plusieurs manières :</p>
+<p>Lorsque vous concevez votre déploiement Global File cache, vous devez déterminer ce qui convient à votre environnement en termes d&#8217;évolutivité, de disponibilité des ressources et de redondance. Global File cache Core peut être déployé de plusieurs manières :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -830,7 +830,7 @@ Global File cache Edge détecte s&#8217;il s&#8217;exécute sur une instance vir
 <div class="sect2">
 <h3 id="plateforme-de-stockage-volumes">Plateforme de stockage (volumes)</h3>
 <div class="paragraph">
-<p>La plateforme de stockage interne – dans ce cas, votre instance Cloud Volumes ONTAP déployée – doit présenter les partages de fichiers SMB. Tout partage qui sera exposé via Global File cache doit permettre au groupe Everyone de contrôler entièrement au niveau du partage, tout en limitant les autorisations par le biais des autorisations NTFS.</p>
+<p>La plateforme de stockage interne, dans ce cas, votre instance Cloud Volumes ONTAP déployée, doit présenter les partages de fichiers SMB. Tout partage qui sera exposé via Global File cache doit permettre au groupe Everyone de contrôler entièrement au niveau du partage, tout en limitant les autorisations par le biais des autorisations NTFS.</p>
 </div>
 <div class="paragraph">
 <p>Si vous n&#8217;avez pas configuré au moins un partage de fichiers SMB sur l&#8217;instance Cloud Volumes ONTAP, vous devez disposer des informations suivantes pour pouvoir configurer ces informations lors de l&#8217;installation :</p>
@@ -857,30 +857,19 @@ Global File cache Edge détecte s&#8217;il s&#8217;exécute sur une instance vir
 <div class="ulist">
 <ul>
 <li>
-<p>Si vous utilisez une licence basée sur l&#8217;abonnement Fibre Channel :</p>
-<div class="ulist">
-<ul>
+<p>https://gfcproxyforcm-prod.azurewebsites.net/</p>
+</li>
 <li>
 <p>https://rest.zuora.com/v1/subscriptions/</p>
 </li>
 <li>
 <p>https://rest.zuora.com/oauth/token</p>
 </li>
-</ul>
-</div>
-</li>
-<li>
-<p>Si vous utilisez une licence NetApp basée sur d&#8217;anciens systèmes :</p>
-<div class="ulist">
-<ul>
 <li>
 <p>https://talonazuremicroservices.azurewebsites.net</p>
 </li>
 <li>
 <p>https://talonlicensing.table.core.windows.net</p>
-</li>
-</ul>
-</div>
 </li>
 </ul>
 </div>
@@ -1036,7 +1025,7 @@ Un serveur de gestion peut prendre en charge plusieurs instances globales de bas
 <p>Pare-feu : les ports TCP doivent être autorisés entre les instances Global File cache Edge et Core.</p>
 </li>
 <li>
-<p>Ports TCP Global File cache : 443 (HTTPS), 6618–6630.</p>
+<p>Ports TCP Global File cache : 443 (HTTPS), 6618-6630.</p>
 </li>
 <li>
 <p>Les périphériques d&#8217;optimisation réseau (tels que Riverbed Steelhead) doivent être configurés pour passer par les ports spécifiques à Global File cache (TCP 6618-6630).</p>
